@@ -5,3 +5,7 @@
 Separate routes for /api/goals under goalsRouter
 
 Middleware are functions that are being exectuted during the req res cycle.
+
+Using custom errorMiddleware to only get stack error shown in development mode.
+
+Instead of try catch in controllers async functions, we'll use package express-error-handler.
