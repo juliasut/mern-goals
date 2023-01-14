@@ -9,3 +9,14 @@ Middleware are functions that are being exectuted during the req res cycle.
 Using custom errorMiddleware to only get stack error shown in development mode.
 
 Instead of try catch in controllers async functions, we'll use package express-error-handler.
+
+### Models
+
+Goals
+Users
+
+Bring mongoose ODM.
+Define schema with the necessary fields. Wrap in mongoose.Schema()
+To export, wrap in mongoose.model(name, schema)
+
+To associate User with a Goal, we'll add a user field with type of ObjectId and specify ref: "User" (name of the model)
