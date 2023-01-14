@@ -4,6 +4,7 @@ const { errorHandler } = require('./middleware/errorMiddleware');
 const dotenv = require('dotenv').config();
 const connectDB = require('./config/db');
 const goalsRouter = require('./routes/goalsRouter');
+const usersRouter = require('./routes/usersRouter');
 const PORT = process.env.PORT || 8000;
 
 connectDB();
@@ -18,6 +19,7 @@ The extended option allows to choose between parsing the URL-encoded data with t
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/goals', goalsRouter);
+app.use('/api/users', usersRouter);
 
 app.use(errorHandler);
 
